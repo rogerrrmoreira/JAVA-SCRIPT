@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Seu numero é PAR ou IMPAR?</title>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Digite um numero">
+    <button onclick="verificarParImpar()">Verificar</button>
+
+    <script>
+        // Verifica se o numero é par ou impar utilizando o metodo getElementById
+        function verificarParImpar() {
+            const numero = document.getElementById('numero').value;
+            if (numero % 2 === 0) { // Verifica se o numero é par
+                alert(`O numero ${numero} é PAR!`);
+                console.log(`O numero ${numero} é PAR!`);
+            } else { // Caso contrário, o numero é impar
+                alert(`O numero ${numero} é IMPAR!`);
+                console.log(`O numero ${numero} é IMPAR!`);
+            }
+        }
+        
+    </script>
+</body>
+</html>

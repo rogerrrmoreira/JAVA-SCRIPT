@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Descubra o comprimento de cada nome na lista!</title>
+</head>
+<body>
+    <h2>Descubra o comprimento da cada nome da lista!</h2>
+    <input type="text" id="nome1" placeholder="Digite um nome">
+    <input type="text" id="nome2" placeholder="Digite um nome">
+    <input type="text" id="nome3" placeholder="Digite um nome">
+    <input type="text" id="nome4" placeholder="Digite um nome">
+    <input type="text" id="nome5" placeholder="Digite um nome">
+    <button onclick="comprimentoLista()">Verificar</button>
+
+    <script>
+        function comprimentoLista() {
+            const nome1 = document.getElementById('nome1').value;
+            const nome2 = document.getElementById('nome2').value;
+            const nome3 = document.getElementById('nome3').value;
+            const nome4 = document.getElementById('nome4').value;
+            const nome5 = document.getElementById('nome5').value;  
+            const comprimentos = [nome1.length, nome2.length, nome3.length, nome4.length, nome5.length];
+            alert("O comprimento dos nomes da lista é: " + comprimentos);
+            console.log("O comprimento dos nomes da lista é: " + comprimentos);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Alterando o texto das DIVS com um botão</title>
+</head>
+<body>
+    <div class="item" id="div1">Texto da DIV 1</div>
+    <div class="item" id="div2">Texto da DIV 2</div>
+    <div class="item" id="div3">Texto da DIV 3</div>
+    <button onclick="alterarTexto()">Alterar Texto</button>
+
+    <script>
+        // Altera o texto das DIVs utilizando o metodo querySelectorAll
+        function alterarTexto() {
+            const divs = document.querySelectorAll('.item');
+            divs.forEach((div, index) => {
+                div.textContent = `Texto da DIV ${index + 1} Item alterado!`;
+            });
+        }
+        
+    </script>
+</body>
+</html>

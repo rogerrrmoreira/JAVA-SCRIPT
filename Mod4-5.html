@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Vamos descobrir quais palavras tem mais de letras!</title>
+</head>
+<body>
+    <h2>Vamos descobrir quais palavras tem mais de 5 letras!</h2>
+    <input type="text" id="palavra1" placeholder="Digite uma palavra">
+    <input type="text" id="palavra2" placeholder="Digite uma palavra">
+    <input type="text" id="palavra3" placeholder="Digite uma palavra">
+    <input type="text" id="palavra4" placeholder="Digite uma palavra">
+    <input type="text" id="palavra5" placeholder="Digite uma palavra">
+    <button onclick="verificarPalavras()">Verificar</button>
+
+    <script>
+        function verificarPalavras() {
+            const palavra1 = document.getElementById('palavra1').value;
+            const palavra2 = document.getElementById('palavra2').value;
+            const palavra3 = document.getElementById('palavra3').value;
+            const palavra4 = document.getElementById('palavra4').value;
+            const palavra5 = document.getElementById('palavra5').value;  
+            const palavrasLongas = [palavra1, palavra2, palavra3, palavra4, palavra5].filter(palavra => palavra.length > 5);
+            alert("As palavras com mais de 5 letras são: " + palavrasLongas.join(', '));
+            console.log("As palavras com mais de 5 letras são: " + palavrasLongas.join(', '));
+        }
+    </script>
+</body>
+</html>

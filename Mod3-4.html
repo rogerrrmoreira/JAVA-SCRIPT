@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Qual sera o numero primo?</title>
+</head>
+<body>
+    <input type="number" id="numero" placeholder="Digite um numero">
+    <button onclick="verificarPrimo()">Verificar</button>
+
+    <script>        
+        function verificarPrimo() {
+            const numero = parseInt(document.getElementById('numero').value);
+            let ehPrimo = true;
+
+            if (numero <= 1) {
+                ehPrimo = false; // Números menores ou iguais a 1 não são primos
+            } else {
+                for (let i = 2; i <= Math.sqrt(numero); i++) {
+                    if (numero % i === 0) { // Verifica se o numero é divisível por algum número entre 2 e a raiz quadrada do numero
+                        ehPrimo = false;
+                        break;
+                    }
+                }
+            }
+
+            if (ehPrimo) {
+                alert(`O numero ${numero} é PRIMO!`);
+                console.log(`O numero ${numero} é PRIMO!`);
+            } else {
+                alert(`O numero ${numero} NÃO é primo!`);
+                console.log(`O numero ${numero} NÃO é primo!`);
+            }
+        }
+    </script>
+</body>
+</html>

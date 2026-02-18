@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos calcular a média!</title>
+</head>
+<body>
+    <h1>Calcule a media dos tres números</h1>
+    <input type="number" id="num1" placeholder="Número 1" />
+    <input type="number" id="num2" placeholder="Número 2" />
+    <input type="number" id="num3" placeholder="Número 3" />
+    <button id="calcular">Calcular Média</button>
+
+     <!-- Parágrafo para mostrar o resultado -->
+  <p id="resultado"></p>
+
+  <script>
+    const input1 = document.getElementById('num1');
+    const input2 = document.getElementById('num2');
+    const input3 = document.getElementById('num3');
+    const btnCalcular = document.getElementById('calcular');
+    const resultado = document.getElementById('resultado');
+
+    btnCalcular.addEventListener('click', () => {
+      const n1 = Number(input1.value);
+      const n2 = Number(input2.value);
+      const n3 = Number(input3.value);
+
+      const media = (n1 + n2 + n3) / 3;
+
+      // Mostrar no console
+      console.log(`A média dos números é: ${media.toFixed(2)}`);
+
+      // Mostrar na página dentro do parágrafo
+      resultado.textContent = `A média dos números é: ${media.toFixed(2)}`;
+    });
+  </script>
+      
+</body>
+</html>

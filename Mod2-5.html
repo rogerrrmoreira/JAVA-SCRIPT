@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Qual pessoa é mais velho?</title>
+</head>
+<body>
+    <h1>Qual pessoa é mais velho?</h1>
+    <input type="text" id="nome1" placeholder="Nome 1" />
+    <input type="number" id="idade1" placeholder="Idade 1" />
+    <input type="text" id="nome2" placeholder="Nome 2" />
+    <input type="number" id="idade2" placeholder="Idade 2" />
+    <button id="comparar">Comparar Idades</button>
+
+     <!-- Parágrafo para mostrar o resultado -->    
+  <p id="resultado"></p>    
+
+  <script>          
+    const input1 = document.getElementById('nome1');
+    const input2 = document.getElementById('idade1');
+    const input3 = document.getElementById('nome2');
+    const input4 = document.getElementById('idade2');
+    const btnComparar = document.getElementById('comparar');
+    const resultado = document.getElementById('resultado');
+
+    btnComparar.addEventListener('click', () => {
+      const nome1 = input1.value;
+      const idade1 = Number(input2.value);
+      const nome2 = input3.value;
+      const idade2 = Number(input4.value);
+
+      if (idade1 > idade2) {
+        const diferenca = idade1 - idade2;
+        resultado.textContent = `${nome1} é mais velho(a) que ${nome2} por ${diferenca} anos.`;
+        console.log(`${nome1} é mais velho(a) que ${nome2} por ${diferenca} anos.`);
+      } else if (idade2 > idade1) {
+        const diferenca = idade2 - idade1;
+        resultado.textContent = `${nome2} é mais velho(a) que ${nome1} por ${diferenca} anos.`;
+        console.log(`${nome2} é mais velho(a) que ${nome1} por ${diferenca} anos.`);  
+      } else {
+        resultado.textContent = 'As idades são iguais.';
+        console.log('As idades são iguais.');
+      }
+    });
+  </script>
+</body>
+</html>

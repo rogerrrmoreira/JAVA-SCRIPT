@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Vamos somar sua lista de numeros!</title>
+</head>
+<body>
+    <h2>Vamos somar sua lista de numeros!</h2>
+    <input type="number" id="num1" placeholder="Digite um numero">
+    <input type="number" id="num2" placeholder="Digite um numero">
+    <input type="number" id="num3" placeholder="Digite um numero">
+    <input type="number" id="num4" placeholder="Digite um numero">
+    <input type="number" id="num5" placeholder="Digite um numero">
+    <button onclick="criarLista()">Criar Lista</button>
+
+    <script>
+        function criarLista() {
+            const num1 = Number(document.getElementById('num1').value);
+            const num2 = Number(document.getElementById('num2').value);
+            const num3 = Number(document.getElementById('num3').value);
+            const num4 = Number(document.getElementById('num4').value);
+            const num5 = Number(document.getElementById('num5').value);  
+            const numeros = [num1, num2, num3, num4, num5];
+            const soma = numeros.reduce((total, num) => total + num, 0);
+            alert("A soma dos números da lista é: " + soma);
+            console.log("A soma dos números da lista é: " + soma);
+        }
+    </script>
+</body>
+</html>

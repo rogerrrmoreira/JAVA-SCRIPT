@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Link com alerta!</title>
+</head>
+<body>
+    <a href="https://www.google.com" onclick="return confirm('Tem certeza que deseja sair?')">Google</a>
+    <a href="https://www.facebook.com" onclick="return confirm('Tem certeza que deseja sair?')">Facebook</a>
+    <a href="https://www.twitter.com" onclick="return confirm('Tem certeza que deseja sair?')">Twitter</a>
+
+    <script>
+        // Exibe um alerta com o texto do link utilizando o metodo getElementByTagName
+        document.getElementsByTagName('a')[0].addEventListener('click', function(event) {
+            alert(this.textContent);
+            event.preventDefault(); // Impede o comportamento padrão do link
+        });
+        document.getElementsByTagName('a')[1].addEventListener('click', function(event) {
+            alert(this.textContent);
+            event.preventDefault();
+        });
+        document.getElementsByTagName('a')[2].addEventListener('click', function(event) {
+            alert(this.textContent);
+            event.preventDefault();
+        });
+        
+    </script>   
+        
+</body>
+</html>

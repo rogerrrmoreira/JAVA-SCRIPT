@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Qual maior numero da lista?</title>
+</head>
+<body>
+    <h2>Descubra qual é o maior numero da lista!</h2>
+    <input type="number" id="num1" placeholder="Digite um numero">
+    <input type="number" id="num2" placeholder="Digite um numero">
+    <input type="number" id="num3" placeholder="Digite um numero">
+    <input type="number" id="num4" placeholder="Digite um numero">
+    <input type="number" id="num5" placeholder="Digite um numero">
+    <button onclick="maiorNumero()">Verificar</button>
+
+    <script>
+        function maiorNumero() {
+            const numeros = [Number(num1.value), Number(num2.value), Number(num3.value), Number(num4.value), Number(num5.value)];
+            const maior = Math.max(...numeros);
+            alert("O maior número da lista é: " + maior);
+            console.log("O maior número da lista é: " + maior);
+        }
+    </script>
+</body>
+</html>

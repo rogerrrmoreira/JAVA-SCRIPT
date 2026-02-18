@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Altere o texto com um botão</title>
+</head>
+<body>
+    <h1 id="text">Texto original</h1>
+    <button onclick="alterarTexto()">Alterar texto</button>
+    <script>
+        let textoOriginal = true
+        function alterarTexto() { // Função para alterar o texto do elemento com id "text"  
+            if (textoOriginal) { // Verifica se o texto atual é o original
+                document.getElementById("text").innerText = "Texto alterado!";
+                textoOriginal = false;
+            } else { // Se o texto atual não for o original, volta para o texto original
+                document.getElementById("text").innerText = "Texto original";
+                textoOriginal = true;
+            }
+        }
+        
+    </script>
+    
+</body>
+</html>

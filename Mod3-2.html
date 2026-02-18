@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Descubra os numeros pares de 1 a 20!</title>
+</head>
+<body>
+    <h2>Descubra os numeros pares de 1 a 20!</h2>
+    <button onclick="mostrarPares()">Mostrar numeros pares</button>
+    <p id="resultado"></p>
+
+    <script>
+        function mostrarPares() {
+            let resultado = document.getElementById("resultado");
+            let pares = [];
+            for (let i = 1; i <= 20; i++) {
+                if (i % 2 === 0) {
+                    pares.push(i);
+                }
+            }
+            resultado.textContent = `Números pares de 1 a 20: ${pares.join(', ')}`;
+            console.log(`Números pares de 1 a 20: ${pares.join(', ')}`);
+        }
+    </script>
+</body>
+</html>
