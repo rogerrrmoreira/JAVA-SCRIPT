@@ -41,6 +41,16 @@ input {
 
 }
 
+p{
+    margin-left: 35px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 70px;
+    color: #ffffff;
+    display: flex; 
+    align-items: center;    
+}
+
 button{
     background: #aec346;
     box-shadow: 0px 18px 40px rgba(174, 195, 70, 0.4);
