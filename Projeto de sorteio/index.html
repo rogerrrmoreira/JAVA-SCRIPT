@@ -15,11 +15,13 @@
     <div>
         <input placeholder="entre" class="input-min" type="number">
         <input placeholder="e" class="input-max" type="number">
-        <p>Número sorteado:<input class="result" readonly></input></p> <!-- mostrar resultado do sorteio-->
+        <p>Número sorteado:<input placeholder="resultado" class="result" readonly></input></p> <!-- mostrar resultado do sorteio-->
         <p class="data-atual"></p> <!-- aqui será mostrada a data -->
     </div>
 
     <button id="btnSortear" onclick="generateNumber()">Sortear</button>
+    <button id="btnRefazer" title="refazer" title="Refazer"><img src="./assets/refazer.png" alt="botao-refazer"></button>
+    
 </body>
 <script src="./scripts.js"></script> <!-- conectar arquivo js-->
 </html>
