@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <title>Conversor de moeda</title>
+</head>
+<body>
+    <img src="./assets/logo.gif" class="logo" alt="logo-devclub-convert-money" class="logo">
+
+    <main>
+        <label>
+            Converter <b>de</b>
+             <select class="currency-select-from-convert">
+                <option value="BRL">R$ Real Brasileiro (BRL)</option>
+                <option value="USD">US$ Dólar Americano (USD)</option>
+                <option value="EUR">€ Euro (EUR)</option>
+                <option value="GBP">£ Libra Esterlina (GBP)</option>
+                <option value="BTC">฿ Bitcoin (BTC)</option>
+             </select>
+        </label>
+
+        <label>
+            Converter <b>para</b>
+             <select class="currency-select-to-convert">
+                <option value="USD">US$ Dólar Americano (USD)</option>
+                <option value="EUR">€ Euro (EUR)</option>
+                <option value="GBP">£ Libra Esterlina (GBP)</option>
+                <option value="BTC">฿ Bitcoin (BTC)</option>
+                <option value="BRL">R$ Real Brasileiro (BRL)</option>
+             </select>
+        </label>
+
+        <label>
+            Valor a ser convertido
+            <input type="number" class="input-currency" name="amount" id="amount" placeholder="R$ 10.000,00"> <!-- O placeholder é apenas um exemplo, o valor real a ser convertido aparecerá no campo de valor a ser convertido -->
+
+        </label>
+
+        <button class="convert-button">Converter</button> <!-- O botão de converter é apenas um exemplo, a conversão real acontecerá quando o usuário clicar nesse botão -->
+
+        <section>
+            <div class="currency-box">
+                <img src="./assets/real.png" class="currency-img-from" alt="logo-moeda-base">
+                <p class="currency-name-from" id="currency-name-from">Real</p>
+                <p class="currency-value">R$ 0,00</p>
+            </div>
+
+            <img src="./assets/Vector.png" class="arrow-img" alt="seta-para-direita">
+
+            <div class="currency-box">
+                <img src="./assets/dolar.png" class="currency-img" alt="logo-moeda-a-convertida">
+                <p class="currency" id="currency-name">Dólar Americano</p>
+                <p class="currency-value-to-convert">US$ 0,00</p>
+            </div>
+        </section>
+    </main>
+</body>
+
+<script src="./script.js"></script>
+</html>
