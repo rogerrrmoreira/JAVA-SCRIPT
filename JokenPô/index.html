@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jokenpô com Alexa</title>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&amp;family=Nunito:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/>
+
+<link href="style.css" rel="stylesheet"/></head>
+<body>
+<div class="game-wrapper">
+<h1>✊ Jokenpô ✌️</h1>
+<p class="subtitle">Você vs. Alexa — Quem vai ganhar?</p>
+<!-- ARENA -->
+<div class="arena">
+<div class="player-side">
+<div class="player-label">👤 Você</div>
+<div class="choice-display" id="playerDisplay">❓</div>
+</div>
+<div class="vs-badge">VS</div>
+<div class="alexa-side">
+<div class="alexa-label">💻 Alexa</div>
+<div class="choice-display" id="alexaDisplay">❓</div>
+</div>
+</div>
+<!-- RESULTADO -->
+<div class="result-banner" id="result">Escolha sua jogada abaixo!</div>
+<!-- PLACAR -->
+<div class="scoreboard">
+<div class="score-card player-card">
+<div class="score-label">Você</div>
+<div class="score-num your-score">0</div>
+</div>
+<div class="score-card">
+<div class="score-label">Alexa</div>
+<div class="score-num machine-score">0</div>
+</div>
+</div>
+<!-- BOTOES -->
+<div class="choices-label">Sua jogada</div>
+<div class="choices">
+<button class="btn-choice" id="pedra" title="Pedra">✊</button>
+<button class="btn-choice" id="papel" title="Papel">✋</button>
+<button class="btn-choice" id="tesoura" title="Tesoura">✌️</button>
+</div>
+<button class="btn-reset" id="reset">🔄 Reiniciar Jogo</button>
+</div>
+
+<script src="script.js"></script></body>
+</html>
