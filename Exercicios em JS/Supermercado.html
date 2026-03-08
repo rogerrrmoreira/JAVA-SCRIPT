@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Caixa de supermercado</title>
+</head>
+
+<body>
+    <h1>Caixa de supermercado</h1>
+    <h2>Calcular o total do carrinho</h2>
+    <button class="btn">Calcular Total do Carrinho</button>
+
+    <script>
+        //Calcular desconto de 10% para produtos acima de R$ 30,00
+        const cart = [10, 244, 99, 2, 20, 33, 250];
+        let finalValue = 0;
+
+        function calcularteDiscount(price, discount) {
+            const result = (price * discount / 100);
+            return result;
+        }
+
+        cart.forEach((value) => {
+            if (value > 30) {
+                const discount = calcularteDiscount(value, 10);
+                finalValue += value - discount;
+            } else {
+                finalValue += value;
+            }
+        });
+
+        console.log(`O valor final da compra foi de R$ ${finalValue.toFixed(2)},
+porem voce terá desconto, irá pagar apenas R$ ${(finalValue - calcularteDiscount(finalValue, 10)).toFixed(2)},
+você economizou de R$ ${calcularteDiscount(finalValue, 10).toFixed(2)}`);
+    </script>
+
+
+</body>
+
+</html>

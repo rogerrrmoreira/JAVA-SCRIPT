@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <title>Calculadora</title>
+</head>
+<body>
+    <input id="num1" placeholder="Digite o primeiro número">
+    <input id="num2" placeholder="Digite o segundo número">
+    <p class="resultado">Resultado:</p>
+
+    <div class="buttonsbox1">
+      <button class="button" onclick="soma()">Calcular +</button>
+      <button class="button" onclick="subtracao()">Calcular -</button>
+    </div>
+
+    <div class="buttonsbox2">
+      <button class="button" onclick="multiplicacao()">Calcular *</button>
+      <button class="button" onclick="divisao()">Calcular /</button>
+    </div>
+
+
+<script>
+function soma() {
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const resultado = num1 + num2;
+  
+  alert(`O resultado da soma é: ${resultado}`);
+  document.querySelector('.resultado').textContent = `Resultado: ${resultado}`;
+}
+
+function subtracao() {
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const resultado = num1 - num2;
+  alert(`O resultado da subtração é: ${resultado}`);
+  document.querySelector('.resultado').textContent = `Resultado: ${resultado}`;
+}
+
+function multiplicacao() {
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const resultado = num1 * num2;
+  alert(`O resultado da multiplicação é: ${resultado}`);
+  document.querySelector('.resultado').textContent = `Resultado: ${resultado}`;
+}
+
+function divisao() {
+  const num1 = parseFloat(document.getElementById('num1').value);
+  const num2 = parseFloat(document.getElementById('num2').value);
+  const resultado = num1 / num2;
+  alert(`O resultado da divisão é: ${resultado}`);
+  document.querySelector('.resultado').textContent = `Resultado: ${resultado}`;
+}
+</script>
+
+<style>
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+  }
+
+  #num1, #num2 {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin-left: 35%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;    
+  }
+
+  p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .buttonsbox1 {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px;
+  }
+    
+    
+  .buttonsbox2 {
+    display: flex;
+    justify-content: center; 
+    margin-bottom: 20px; 
+  }
+  
+  .button {
+    background-color: #4CAF50; 
+    color: #fff; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #45a049; 
+  }
+
+</style>
+</body>
+</html>

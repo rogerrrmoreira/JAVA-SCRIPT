@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Desafio For</title>
+</head>
+
+<body>
+    <input placeholder="Digite o nome do contato">
+    <p>Contatos:</p>
+    <button class="button">Procurar Contato</button>
+
+</body>
+<script>
+
+    let p = document.querySelector('p');
+    let input = document.querySelector('input');
+
+    const contacts = [
+        {
+            name: 'João',
+            phone: '123456789'
+        },
+        {
+            name: 'Maria',
+            phone: '987654321'
+        },
+        {
+            name: 'Pedro',
+            phone: '555555555'
+        },
+        {
+            name: 'Ana',
+            phone: '111111111'
+        }
+    ]
+
+    document.querySelector('button').addEventListener('click', function () {
+        let contactName = input.value;
+        let contactFound = false;
+        let i = 0;
+
+        do {
+            if (contacts[i].name.toLowerCase() === contactName.toLowerCase()) { // Comparação case-insensitive do nome do contato com o valor do input
+                p.textContent = `Contato encontrado: ${contacts[i].name} - ${contacts[i].phone}`; // Exibe o nome e telefone do contato encontrado
+                contactFound = true;
+                break;
+            }
+            i++;
+        } while (i < contacts.length);
+            
+        if (!contactFound) {
+            p.textContent = 'Contato não encontrado.';
+        }
+    });
+</script>
+
+</html>
