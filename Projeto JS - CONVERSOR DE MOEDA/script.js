@@ -2,16 +2,19 @@ const convertButton = document.querySelector('.convert-button');
 const currencySelect = document.querySelector('.currency-select-to-convert');
 const currencySelectFrom = document.querySelector('.currency-select-from-convert');
 
-function convertValues(){ //essa função tem a função de converter os valores, utilizando o valor do input e o valor da moeda selecionada para converter o valor, além de formatar os valores para o formato de moeda
+async function convertValues (){ //essa função tem a função de converter os valores, utilizando o valor do input e o valor da moeda selecionada para converter o valor, além de formatar os valores para o formato de moeda
     const inputCurrencyValue = document.querySelector('.input-currency').value;
     const currencyValueToConvert = document.querySelector('.currency-value');
     const currencyValueConverted = document.querySelector('.currency-value-to-convert');
+
+    const data = await fetch('https://economia.awesomeapi.com.br/last/USD-BRL,EUR-BRL,GBP-BRL,BTC-BRL')
+    .then(response => response.json())
     
     console.log(currencySelect.value + ' to ' + currencySelectFrom.value); // essa linha é apenas para verificar se o valor da moeda selecionada está sendo capturado corretamente, ela pode ser removida depois de verificar isso
-        const dolarToday = 5.2;
-        const euroToday = 6.2;
-        const libraToday = 7.2;
-        const bitcoinToday = 8.2;
+        const dolarToday = data.USDBRL.high;
+        const euroToday = data.EURBRL.high;
+        const libraToday = data.GBPBRL.high;
+        const bitcoinToday = data.BTCBRL.high;
         const realToday = 1.0; // essa linha é apenas para verificar se o valor do real está sendo capturado corretamente, ela pode ser removida depois de verificar isso   
          
     if(currencySelectFrom.value === 'USD'){
